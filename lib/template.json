@@ -1,0 +1,29 @@
+{
+    "asyncapi": "2.5.0",
+    "info": {
+        "title": "generated AsyncAPI document",
+        "version": "0.0.1"
+    },
+    "servers": {
+        "kafka": { }
+    },
+    "channels": {
+        "PLACEHOLDER": {
+            "description": "generated topic documentation",
+            "publish": {
+                "message": {
+                    "oneOf": [ ]
+                }
+            },
+            "subscribe": {
+                "message": {
+                    "oneOf": [ ]
+                }
+            }
+        }
+    },
+    "components": {
+        "messages": { },
+        "schemas": { }
+    }
+}

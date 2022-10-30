@@ -1,0 +1,25 @@
+{
+  "name": "asyncapi-kafka-generate-doc",
+  "version": "0.0.1",
+  "description": "Generate an AsyncAPI doc from the messages on an Apache Kafka topic",
+  "main": "lib/generator.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "generate-schema": "2.6.0",
+    "js-yaml": "4.1.0",
+    "json-schema-compare": "0.2.2",
+    "kafkajs": "2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "asyncapi",
+    "kafka"
+  ],
+  "author": "Dale Lane",
+  "license": "MIT"
+}
