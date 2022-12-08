@@ -1,6 +1,6 @@
 {
   "name": "asyncapi-kafka-generate-doc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate an AsyncAPI doc from the messages on an Apache Kafka topic",
   "main": "lib/generator.js",
   "directories": {
@@ -10,7 +10,7 @@
     "generate-schema": "2.6.0",
     "js-yaml": "4.1.0",
     "json-schema-compare": "0.2.2",
-    "kafkajs": "2.2.2"
+    "kafkajs": "2.2.3"
   },
   "devDependencies": {},
   "scripts": {
