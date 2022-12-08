@@ -1,23 +1,42 @@
 {
     "asyncapi": "2.5.0",
     "info": {
-        "title": "generated AsyncAPI document",
-        "version": "0.0.1"
+        "title": "generated AsyncAPI document - update this",
+        "description": "generated documentation - update this",
+        "version": "0.0.1",
+        "contact": {
+            "name": "Your Name",
+            "email": "your.email@domain.com",
+            "url": "http://your.web.address"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
     },
+    "tags": [],
     "servers": {
         "kafka": { }
     },
     "channels": {
         "PLACEHOLDER": {
-            "description": "generated topic documentation",
+            "description": "generated topic documentation - update this",
             "publish": {
+                "description": "generated publish operation documentation - update this",
                 "message": {
                     "oneOf": [ ]
                 }
             },
             "subscribe": {
+                "description": "generated subscribe operation documentation - update this",
                 "message": {
                     "oneOf": [ ]
+                }
+            },
+            "bindings": {
+                "kafka": {
+                    "topicConfiguration": {},
+                    "bindingVersion": "0.4.0"
                 }
             }
         }
