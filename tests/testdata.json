@@ -1,0 +1,441 @@
+{
+    "FLIGHT.LANDINGS": {
+        "messages": [
+            {
+                "value": "{\"eventid\":\"6DBBBA4AF8F2\",\"flight\":\"AC133\",\"terminal\":\"2\",\"passengers\":178}"
+            },
+            {
+                "value": "{\"eventid\":\"CE301C2A4B9A\",\"flight\":\"AC226\",\"terminal\":\"3\",\"passengers\":124}"
+            }
+        ],
+        "topicMetadata": {
+            "topics": [
+                {
+                    "name": "FLIGHT.LANDINGS",
+                    "partitions": [
+                        {
+                            "partitionErrorCode": 0,
+                            "partitionId": 0,
+                            "leader": 1,
+                            "replicas": [
+                                1,
+                                2,
+                                0
+                            ],
+                            "isr": [
+                                1,
+                                2,
+                                0
+                            ],
+                            "offlineReplicas": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "configs": {
+            "resources": [
+                {
+                    "errorCode": 0,
+                    "errorMessage": "",
+                    "resourceType": 2,
+                    "resourceName": "FLIGHT.LANDINGS",
+                    "configEntries": [
+                        {
+                            "configName": "cleanup.policy",
+                            "configValue": "delete",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "max.message.bytes",
+                            "configValue": "1048588",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "retention.ms",
+                            "configValue": "101606400000",
+                            "readOnly": false,
+                            "isDefault": false,
+                            "configSource": 1,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "retention.bytes",
+                            "configValue": "-1",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "delete.retention.ms",
+                            "configValue": "86400000",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "asyncapi": {
+            "asyncapi": "2.5.0",
+            "info": {
+                "title": "generated AsyncAPI document - update this",
+                "description": "generated documentation - update this",
+                "version": "0.0.1",
+                "contact": {
+                    "name": "Your Name",
+                    "email": "your.email@domain.com",
+                    "url": "http://your.web.address"
+                },
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            },
+            "tags": [],
+            "servers": {
+                "kafka": {
+                    "url": "test-bootstrap.com:9092",
+                    "protocol": "kafka-secure",
+                    "security": [
+                        {
+                            "kafkaSecurity": []
+                        }
+                    ]
+                }
+            },
+            "channels": {
+                "FLIGHT.LANDINGS": {
+                    "description": "generated topic documentation - update this",
+                    "publish": {
+                        "description": "generated publish operation documentation - update this",
+                        "message": {
+                            "oneOf": [
+                                {
+                                    "$ref": "#/components/messages/message1"
+                                }
+                            ]
+                        },
+                        "operationId": "publishFLIGHT.LANDINGS"
+                    },
+                    "subscribe": {
+                        "description": "generated subscribe operation documentation - update this",
+                        "message": {
+                            "oneOf": [
+                                {
+                                    "$ref": "#/components/messages/message1"
+                                }
+                            ]
+                        },
+                        "operationId": "subscribeFLIGHT.LANDINGS"
+                    },
+                    "bindings": {
+                        "kafka": {
+                            "topicConfiguration": {
+                                "cleanup.policy": "delete",
+                                "max.message.bytes": "1048588",
+                                "retention.ms": "101606400000",
+                                "retention.bytes": "-1",
+                                "delete.retention.ms": "86400000"
+                            },
+                            "bindingVersion": "0.4.0",
+                            "partitions": 1,
+                            "replicas": 3
+                        }
+                    }
+                }
+            },
+            "components": {
+                "messages": {
+                    "message1": {
+                        "name": "message1",
+                        "title": "title for message 1 - update this",
+                        "summary": "summary of the message - update this",
+                        "contentType": "application/json",
+                        "payload": {
+                            "$ref": "#/components/schemas/message1"
+                        },
+                        "examples": [
+                            {
+                                "name": "example",
+                                "payload": {
+                                    "eventid": "6DBBBA4AF8F2",
+                                    "flight": "AC133",
+                                    "terminal": "2",
+                                    "passengers": 178
+                                }
+                            }
+                        ]
+                    }
+                },
+                "schemas": {
+                    "message1": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "schema",
+                        "type": "object",
+                        "properties": {
+                            "eventid": {
+                                "type": "string"
+                            },
+                            "flight": {
+                                "type": "string"
+                            },
+                            "terminal": {
+                                "type": "string"
+                            },
+                            "passengers": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                },
+                "securitySchemes": {
+                    "kafkaSecurity": {
+                        "type": "scramSha512"
+                    }
+                }
+            }
+        }
+    },
+    "STOCK.PRICES.IBM": {
+        "messages": [
+            {
+                "value": "{\"open\":149.16,\"high\":149.16,\"low\":149.16,\"close\":149.16,\"volume\":1902,\"timestamp\":1669929120,\"datetime\":\"2022-12-01 16:12:00\"}"
+            },
+            {
+                "value": "{\"open\":149.16,\"high\":149.16,\"low\":149.16,\"close\":149.16,\"volume\":3148,\"timestamp\":1669931880,\"datetime\":\"2022-12-01 16:58:00\"}"
+            },
+            {
+                "value": "{\"open\":149.0,\"high\":149.0,\"low\":149.0,\"close\":149.0,\"volume\":200,\"timestamp\":1669936980,\"datetime\":\"2022-12-01 18:23:00\"}"
+            }
+        ],
+        "topicMetadata": {
+            "topics": [
+                {
+                    "name": "STOCK.PRICES.IBM",
+                    "partitions": [
+                        {
+                            "partitionErrorCode": 0,
+                            "partitionId": 0,
+                            "leader": 0,
+                            "replicas": [
+                                0,
+                                2,
+                                1
+                            ],
+                            "isr": [
+                                1,
+                                2,
+                                0
+                            ],
+                            "offlineReplicas": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "configs": {
+            "resources": [
+                {
+                    "errorCode": 0,
+                    "errorMessage": "",
+                    "resourceType": 2,
+                    "resourceName": "STOCK.PRICES.IBM",
+                    "configEntries": [
+                        {
+                            "configName": "cleanup.policy",
+                            "configValue": "delete",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "max.message.bytes",
+                            "configValue": "1048588",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "retention.ms",
+                            "configValue": "101606400000",
+                            "readOnly": false,
+                            "isDefault": false,
+                            "configSource": 1,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "retention.bytes",
+                            "configValue": "-1",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        },
+                        {
+                            "configName": "delete.retention.ms",
+                            "configValue": "86400000",
+                            "readOnly": false,
+                            "isDefault": true,
+                            "configSource": 5,
+                            "isSensitive": false,
+                            "configSynonyms": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "asyncapi": {
+            "asyncapi": "2.5.0",
+            "info": {
+                "title": "generated AsyncAPI document - update this",
+                "description": "generated documentation - update this",
+                "version": "0.0.1",
+                "contact": {
+                    "name": "Your Name",
+                    "email": "your.email@domain.com",
+                    "url": "http://your.web.address"
+                },
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            },
+            "tags": [],
+            "servers": {
+                "kafka": {
+                    "url": "test-bootstrap.com:9092",
+                    "protocol": "kafka-secure",
+                    "security": [
+                        {
+                            "kafkaSecurity": []
+                        }
+                    ]
+                }
+            },
+            "channels": {
+                "STOCK.PRICES.IBM": {
+                    "description": "generated topic documentation - update this",
+                    "publish": {
+                        "description": "generated publish operation documentation - update this",
+                        "message": {
+                            "oneOf": [
+                                {
+                                    "$ref": "#/components/messages/message1"
+                                }
+                            ]
+                        },
+                        "operationId": "publishSTOCK.PRICES.IBM"
+                    },
+                    "subscribe": {
+                        "description": "generated subscribe operation documentation - update this",
+                        "message": {
+                            "oneOf": [
+                                {
+                                    "$ref": "#/components/messages/message1"
+                                }
+                            ]
+                        },
+                        "operationId": "subscribeSTOCK.PRICES.IBM"
+                    },
+                    "bindings": {
+                        "kafka": {
+                            "topicConfiguration": {
+                                "cleanup.policy": "delete",
+                                "max.message.bytes": "1048588",
+                                "retention.ms": "101606400000",
+                                "retention.bytes": "-1",
+                                "delete.retention.ms": "86400000"
+                            },
+                            "bindingVersion": "0.4.0",
+                            "partitions": 1,
+                            "replicas": 3
+                        }
+                    }
+                }
+            },
+            "components": {
+                "messages": {
+                    "message1": {
+                        "name": "message1",
+                        "title": "title for message 1 - update this",
+                        "summary": "summary of the message - update this",
+                        "contentType": "application/json",
+                        "payload": {
+                            "$ref": "#/components/schemas/message1"
+                        },
+                        "examples": [
+                            {
+                                "name": "example",
+                                "payload": {
+                                    "open": 149.16,
+                                    "high": 149.16,
+                                    "low": 149.16,
+                                    "close": 149.16,
+                                    "volume": 1902,
+                                    "timestamp": 1669929120,
+                                    "datetime": "2022-12-01 16:12:00"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "schemas": {
+                    "message1": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "title": "schema",
+                        "type": "object",
+                        "properties": {
+                            "open": {
+                                "type": "number"
+                            },
+                            "high": {
+                                "type": "number"
+                            },
+                            "low": {
+                                "type": "number"
+                            },
+                            "close": {
+                                "type": "number"
+                            },
+                            "volume": {
+                                "type": "number"
+                            },
+                            "timestamp": {
+                                "type": "number"
+                            },
+                            "datetime": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "securitySchemes": {
+                    "kafkaSecurity": {
+                        "type": "scramSha512"
+                    }
+                }
+            }
+        }
+    }
+}
